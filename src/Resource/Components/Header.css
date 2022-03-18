@@ -1,0 +1,22 @@
+/* remove dot in list */
+
+li {
+  list-style-type: none;
+}
+.container,
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+/* resize  */
+.logo {
+  height: 20px;
+  width: 80px;
+}
+
+.cart,
+.userPhoto {
+  height: 35px;
+  width: 35px;
+}
