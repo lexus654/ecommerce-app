@@ -10,7 +10,7 @@ import "./HolderItems.css";
 function Holderitems() {
   return (
     <div>
-      <div>
+      <div className="holderItems-contaner">
         <Header></Header>
         {/* columns */}
         <div>
