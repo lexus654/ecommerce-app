@@ -1,0 +1,15 @@
+.holderItems-main-container {
+  background-color: aquamarine;
+  height: 550px;
+}
+.holderItems-column-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.holderItems-row-container {
+  display: flex;
+
+  justify-content: space-around;
+}
