@@ -9,15 +9,15 @@ import "./HolderItems.css";
 
 function Holderitems() {
   return (
-    <div>
-      <div className="holderItems-contaner">
-        <Header></Header>
+    <div className="holderItems-main-container">
+      <Header></Header>
+      <div className="">
         {/* columns */}
-        <div>
+        <div className="holderItems-column-container">
           <MainPictureHolder></MainPictureHolder>
           <GridPictures></GridPictures>
         </div>
-        <div>
+        <div className="holderItems-column-container">
           <TextHolder></TextHolder>
           <PriceHolder></PriceHolder>
         </div>
