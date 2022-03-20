@@ -1,13 +1,13 @@
 import Header from "./Header";
-import react from "react";
+
 import TextHolder from "./Body/TextHolder";
 import GridPictures from "./Body/GridPictures";
 import PriceHolder from "./Body/PriceHolder";
 import MainPictureHolder from "./Body/MainPictureHolder";
 
-import "./HolderItems.css";
+import "./Content.css";
 
-function Holderitems() {
+function Content() {
   return (
     <div className="holderItems-main-container">
       <Header></Header>
@@ -26,4 +26,4 @@ function Holderitems() {
   );
 }
 
-export default Holderitems;
+export default Content;
