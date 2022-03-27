@@ -6,7 +6,7 @@ import PriceHolder from "./Body/PriceHolder";
 import MainPictureHolder from "./Body/MainPictureHolder";
 
 import "./Content.css";
-
+// push mo
 function Content() {
   return (
     <div className="holderItems-main-container">
