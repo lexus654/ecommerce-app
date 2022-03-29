@@ -4,9 +4,18 @@ import TextHolder from "./Body/TextHolder";
 import GridPictures from "./Body/GridPictures";
 import PriceHolder from "./Body/PriceHolder";
 import MainPictureHolder from "./Body/MainPictureHolder";
+import styled from "styled-components";
 
-import "./Content.css";
-// push mo
+// refactor
+const HolderColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 40vw;
+`;
+
 function Content() {
   return (
     <div className="holderItems-main-container">
@@ -16,23 +25,14 @@ function Content() {
         style={{ display: "flex", justifyContent: "space-around" }}
       >
         {/* columns */}
-        <div
-          className="holderItems-column-container"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            marginTop: "20px",
-          }}
-        >
+        <HolderColumn>
           <MainPictureHolder></MainPictureHolder>
           <GridPictures></GridPictures>
-        </div>
-        <div className="holderItems-column-container">
+        </HolderColumn>
+        <HolderColumn>
           <TextHolder></TextHolder>
           <PriceHolder></PriceHolder>
-        </div>
+        </HolderColumn>
       </div>
     </div>
   );
