@@ -8,15 +8,20 @@ const Holder = styled.ul`
   width: 300px;
   display: flex;
   justify-content: space-between;
+  & img {
+    width: 60px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
 `;
 
 function GridPictures() {
   return (
     <Holder>
-      <img style={{ width: "60px" }} src={gridPicture1} alt="1st"></img>
-      <img style={{ width: "60px" }} src={gridPicture2} alt="2nd"></img>
-      <img style={{ width: "60px" }} src={gridPicture3} alt="3rd"></img>
-      <img style={{ width: "60px" }} src={gridPicture4} alt="4th"></img>
+      <img src={gridPicture1} alt="1st"></img>
+      <img src={gridPicture2} alt="2nd"></img>
+      <img src={gridPicture3} alt="3rd"></img>
+      <img src={gridPicture4} alt="4th"></img>
     </Holder>
   );
 }

@@ -4,7 +4,7 @@ import mainPicture from "../../images/image-product-1.jpg";
 function MainPictureHolder() {
   return (
     <img
-      style={{ width: "300px" }}
+      style={{ width: "300px", borderRadius: "10px" }}
       className="mainProduct picture"
       src={mainPicture}
       alt="Main product"
