@@ -3,13 +3,18 @@ import minus from "../../images/icon-minus.svg";
 import plus from "../../images/icon-plus.svg";
 import styled from "styled-components";
 
-const HolderRow = styled.div`
+// const HolderRow = styled.div`
+//   display: flex;
+//   flex-direction: row;
+// `;
+// const HolderColumn = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `;
+
+const Holder = styled.div`
   display: flex;
-  flex-direction: row;
-`;
-const HolderColumn = styled.div`
-  display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => props.direction};
 `;
 const MainHolder = styled.div`
   text-align: left;
@@ -19,14 +24,14 @@ const MainHolder = styled.div`
 function PriceHolder() {
   return (
     <MainHolder>
-      <HolderColumn>
+      <Holder direction="column">
         <p>
           $125.00 <span>50%</span>
         </p>
         <p> $250.00 </p>
-      </HolderColumn>
-      <HolderRow>
-        <HolderRow>
+      </Holder>
+      <Holder direction="row">
+        <Holder direction="row">
           <button>
             <img src={minus} alt="minus button"></img>
           </button>
@@ -34,12 +39,12 @@ function PriceHolder() {
           <button>
             <img src={plus} alt="plus button"></img>
           </button>
-        </HolderRow>
+        </Holder>
         <button>
           <img src={cartPrice} alt="add to cart"></img>
           Add to Cart
         </button>
-      </HolderRow>
+      </Holder>
     </MainHolder>
   );
 }
