@@ -1,5 +1,6 @@
 import styled from "styled-components";
 const Holder = styled.div`
+  text-align: left;
   & span {
     color: blue;
     width: 100%;
