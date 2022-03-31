@@ -3,15 +3,6 @@ import minus from "../../images/icon-minus.svg";
 import plus from "../../images/icon-plus.svg";
 import styled from "styled-components";
 
-// const HolderRow = styled.div`
-//   display: flex;
-//   flex-direction: row;
-// `;
-// const HolderColumn = styled.div`
-//   display: flex;
-//   flex-direction: column;
-// `;
-
 const Holder = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};
