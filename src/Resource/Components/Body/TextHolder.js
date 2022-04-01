@@ -1,9 +1,17 @@
 import styled from "styled-components";
 const Holder = styled.div`
   text-align: left;
+  width: 75%;
+  background-color: coral;
   & span {
     color: blue;
-    width: 100%;
+    font-size: 0.9rem;
+  }
+  & h1 {
+    font-size: 2.7rem;
+  }
+  & p {
+    font-size: 0.9rem;
   }
 `;
 

@@ -18,24 +18,32 @@ const HolderColumn = styled.div`
 
 const Holder = styled.div`
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+`;
+
+const MainHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 function Content() {
   return (
-    <div className="holderItems-main-container">
+    <MainHolder>
       <Header></Header>
       <Holder>
         <HolderColumn>
           <MainPictureHolder></MainPictureHolder>
           <GridPictures></GridPictures>
         </HolderColumn>
-        <HolderColumn style={{ width: "30vw", marginLeft: "-500px" }}>
+        <HolderColumn>
           <TextHolder></TextHolder>
           <PriceHolder></PriceHolder>
         </HolderColumn>
       </Holder>
-    </div>
+    </MainHolder>
   );
 }
 

@@ -5,6 +5,7 @@ import userPhoto from "../images/image-avatar.png";
 import styled from "styled-components";
 
 const Holder = styled.div`
+  width: 80%;
   height: 100px;
   background-color: aqua;
   padding: 0px 60px;
@@ -17,10 +18,12 @@ const Holder = styled.div`
   & .logo {
     width: 150px;
   }
+
+  & .list-centered{
+    margin-left:-200px
+  }
   & li {
-    font-size: 0.9rem;
-    position: relative;
-    right: 250px;
+    font-size: 0.9rem
     color: gray;
     cursor: pointer;
     margin: 0 10px;
