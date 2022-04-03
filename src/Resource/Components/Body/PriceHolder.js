@@ -7,15 +7,26 @@ const Holder = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};
   & .price {
-    font-size: 1.3rem;
+    color: black;
+    font-size: 1.5rem;
   }
   & .discount {
-    padding: 1px;
-    background-color: orange;
+    color: hsl(26, 100%, 55%);
+    padding: 1px 6px;
+    background-color: hsl(25, 100%, 94%);
+    font-weight: bolder;
     font-size: 0.9rem;
+    border-radius: 20%;
+    position: relative;
+    bottom: 2px;
+    left: 5px;
   }
   & .original-price {
+    margin-top: 6px;
+    margin-bottom: 30px;
     font-size: 1rem;
+    font-weight: bolder;
+    color: hsl(219, 9%, 45%);
     text-decoration: line-through;
   }
   /* buttons */
