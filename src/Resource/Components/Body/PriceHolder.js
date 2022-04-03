@@ -6,6 +6,7 @@ import styled from "styled-components";
 const Holder = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};
+  width: 100%;
   & .price {
     color: black;
     font-size: 1.5rem;
@@ -31,22 +32,41 @@ const Holder = styled.div`
   }
   /* buttons */
   & .quantityButton {
-    width: 40px;
-    height: 40px;
-
-    background-color: green;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: hsl(223, 64%, 98%);
+    & img {
+      width: 15px;
+    }
   }
   & .quantity {
-    background-color: green;
+    background-color: hsl(223, 64%, 98%);
     text-align: center;
     padding: 10px;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+    font-weight: bold;
   }
   & .cartButton {
-    margin-left: 30px;
-    width: 200px;
-    height: 40px;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 10px;
+    width: 500px;
+    height: 50px;
+    color: hsl(223, 64%, 98%);
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      filter: invert(20%) sepia(3%) saturate(99%) hue-rotate(24deg)
+        brightness(119%) contrast(100%);
+      font-weight: bolder;
+      margin-right: 10px;
+    }
   }
 `;
 const MainHolder = styled.div`
