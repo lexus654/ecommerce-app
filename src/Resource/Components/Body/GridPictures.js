@@ -12,16 +12,23 @@ const Holder = styled.ul`
     width: 60px;
     margin-top: 10px;
     border-radius: 10px;
+    cursor: pointer;
+  }
+  /* for focus */
+  & img:focus {
+    cursor: pointer;
+    border: 3px solid hsl(26, 100%, 55%);
+    filter: blur(0.7px);
   }
 `;
 
 function GridPictures() {
   return (
     <Holder>
-      <img src={gridPicture1} alt="1st"></img>
-      <img src={gridPicture2} alt="2nd"></img>
-      <img src={gridPicture3} alt="3rd"></img>
-      <img src={gridPicture4} alt="4th"></img>
+      <img src={gridPicture1} alt="1st" tabindex="0"></img>
+      <img src={gridPicture2} alt="2nd" tabindex="0"></img>
+      <img src={gridPicture3} alt="3rd" tabindex="0"></img>
+      <img src={gridPicture4} alt="4th" tabindex="0"></img>
     </Holder>
   );
 }
