@@ -4,11 +4,13 @@ import userPhoto from "../images/image-avatar.png";
 // import "./Header.css";
 import styled from "styled-components";
 
+// fixing the styles
 const Holder = styled.div`
-  width: 80%;
+  width: 75%;
   height: 100px;
-  background-color: aqua;
-  padding: 0px 60px;
+  padding: 0px 0;
+  margin-bottom: 10px;
+  border-bottom: hsl(223, 64%, 98%) 3px solid;
   &,
   ul {
     display: flex;
@@ -17,28 +19,36 @@ const Holder = styled.div`
   }
   & .logo {
     width: 150px;
+    cursor: pointer;
   }
 
-  & .list-centered{
-    margin-left:-200px
+  & .list-centered {
+    margin-left: -250px;
   }
   & li {
-    font-size: 0.9rem
-    color: gray;
+    font-size: 0.9rem;
+    color: hsl(220, 14%, 75%);
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 700;
     cursor: pointer;
     margin: 0 10px;
     list-style-type: none;
   }
-  & .cart,
-  .userPhoto {
-    height: 35px;
-    width: 35px;
-  }
 
   & .list-end {
     display: flex;
-    width: 100px;
-    justify-content: space-between;
+    width: 120px;
+    justify-content: space-around;
+    & .cart {
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+    }
+    & .userPhoto {
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+    }
   }
 `;
 
