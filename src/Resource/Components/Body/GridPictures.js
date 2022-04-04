@@ -5,7 +5,7 @@ import gridPicture4 from "../../images/image-product-4.jpg";
 import styled from "styled-components";
 
 const Holder = styled.ul`
-  width: 300px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
   & img {

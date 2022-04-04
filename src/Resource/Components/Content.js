@@ -13,13 +13,17 @@ const HolderColumn = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  width: 40vw;
+  width: 38vw;
+  margin-right: -30px;
+  margin-left: -30px;
 `;
 
 const Holder = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
+  width: 100%;
 `;
 
 const MainHolder = styled.div`

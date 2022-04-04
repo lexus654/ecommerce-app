@@ -36,6 +36,7 @@ const Holder = styled.div`
     height: 50px;
     border: none;
     background-color: hsl(223, 64%, 98%);
+    cursor: pointer;
     & img {
       width: 15px;
     }
@@ -61,6 +62,7 @@ const Holder = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     & img {
       filter: invert(20%) sepia(3%) saturate(99%) hue-rotate(24deg)
         brightness(119%) contrast(100%);

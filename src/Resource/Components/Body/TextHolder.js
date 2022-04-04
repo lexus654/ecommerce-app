@@ -18,7 +18,7 @@ const Holder = styled.div`
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 3px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   & p {
     font-size: 0.9rem;
