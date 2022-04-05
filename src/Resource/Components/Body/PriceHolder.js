@@ -2,7 +2,7 @@ import cartPrice from "../../images/icon-cart.svg";
 import minus from "../../images/icon-minus.svg";
 import plus from "../../images/icon-plus.svg";
 import styled from "styled-components";
-
+import React, { useState } from "react";
 const Holder = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};
@@ -77,6 +77,19 @@ const MainHolder = styled.div`
 `;
 
 function PriceHolder() {
+  // use state to update the button
+  const [newValue, setNewvalue] = useState(0);
+
+  // function
+  const addValue = function () {
+    setNewvalue(newValue + 1);
+  };
+  const minusValue = function () {
+    if (newValue > 0) {
+      setNewvalue(newValue - 1);
+    } else setNewvalue(0);
+  };
+
   return (
     <MainHolder>
       <Holder direction="column">
@@ -87,11 +100,11 @@ function PriceHolder() {
       </Holder>
       <Holder direction="row">
         <Holder direction="row">
-          <button className="quantityButton">
+          <button onClick={minusValue} className="quantityButton">
             <img src={minus} alt="minus button"></img>
           </button>
-          <p className="quantity">0</p>
-          <button className="quantityButton">
+          <p className="quantity">{newValue}</p>
+          <button onClick={addValue} className="quantityButton">
             <img src={plus} alt="plus button"></img>
           </button>
         </Holder>
