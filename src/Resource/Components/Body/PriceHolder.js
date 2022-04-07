@@ -3,6 +3,7 @@ import minus from "../../images/icon-minus.svg";
 import plus from "../../images/icon-plus.svg";
 import styled from "styled-components";
 import React, { useState } from "react";
+import Content from "../Content";
 const Holder = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};
@@ -76,7 +77,7 @@ const MainHolder = styled.div`
   width: 75%;
 `;
 
-function PriceHolder() {
+function PriceHolder(props) {
   // use state to update the button
   const [newValue, setNewvalue] = useState(0);
 
@@ -89,14 +90,16 @@ function PriceHolder() {
       setNewvalue(newValue - 1);
     } else setNewvalue(0);
   };
+  const originalPrice = props.price / (props.discount / 100);
 
   return (
     <MainHolder>
       <Holder direction="column">
         <h1 className="price">
-          $125.00 <span className="discount">50%</span>
+          ${props.price.toFixed(2)}
+          <span className="discount">{props.discount}%</span>
         </h1>
-        <p className="original-price"> $250.00 </p>
+        <p className="original-price">${originalPrice.toFixed(2)}</p>
       </Holder>
       <Holder direction="row">
         <Holder direction="row">

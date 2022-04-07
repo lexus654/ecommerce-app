@@ -34,15 +34,20 @@ const MainHolder = styled.div`
   align-items: center;
 `;
 
-const title = "SNEAKER COMPANY";
-const productName = "Fall Limited Edition Sneakers";
-const description = `These low-profile sneakers are your perfect casual wear companion.
+const sneaker = {
+  tagline: "SNEAKER COMPANY",
+  productName: "Fall Limited Edition Sneakers",
+  description: `These low-profile sneakers are your perfect casual wear companion.
 Featuring a durable rubber outer sole, they'll withstand everything the
-weather can offer`;
+weather can offer`,
+  price: 125.0,
+  discount: 50,
+};
+
 function Content() {
   return (
     <MainHolder>
-      <Cart title={title} productName={productName}></Cart>
+      <Cart title={sneaker.title} productName={sneaker.productName}></Cart>
       <Header></Header>
       <Holder>
         <HolderColumn>
@@ -51,11 +56,14 @@ function Content() {
         </HolderColumn>
         <HolderColumn>
           <TextHolder
-            title={title}
-            productName={productName}
-            description={description}
+            title={sneaker.title}
+            productName={sneaker.productName}
+            description={sneaker.description}
           ></TextHolder>
-          <PriceHolder></PriceHolder>
+          <PriceHolder
+            price={sneaker.price}
+            discount={sneaker.discount}
+          ></PriceHolder>
         </HolderColumn>
       </Holder>
     </MainHolder>
