@@ -5,6 +5,7 @@ import GridPictures from "./Body/GridPictures";
 import PriceHolder from "./Body/PriceHolder";
 import MainPictureHolder from "./Body/MainPictureHolder";
 import styled from "styled-components";
+import Cart from "./Cart";
 
 // refactor
 const HolderColumn = styled.div`
@@ -33,9 +34,15 @@ const MainHolder = styled.div`
   align-items: center;
 `;
 
+const title = "SNEAKER COMPANY";
+const productName = "Fall Limited Edition Sneakers";
+const description = `These low-profile sneakers are your perfect casual wear companion.
+Featuring a durable rubber outer sole, they'll withstand everything the
+weather can offer`;
 function Content() {
   return (
     <MainHolder>
+      <Cart title={title} productName={productName}></Cart>
       <Header></Header>
       <Holder>
         <HolderColumn>
@@ -43,7 +50,11 @@ function Content() {
           <GridPictures></GridPictures>
         </HolderColumn>
         <HolderColumn>
-          <TextHolder></TextHolder>
+          <TextHolder
+            title={title}
+            productName={productName}
+            description={description}
+          ></TextHolder>
           <PriceHolder></PriceHolder>
         </HolderColumn>
       </Holder>

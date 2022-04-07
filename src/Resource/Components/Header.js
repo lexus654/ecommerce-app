@@ -3,6 +3,7 @@ import cart from "../images/icon-cart.svg";
 import userPhoto from "../images/image-avatar.png";
 // import "./Header.css";
 import styled from "styled-components";
+import Cart from "./Cart";
 
 // fixing the styles
 const Holder = styled.div`
@@ -11,6 +12,7 @@ const Holder = styled.div`
   padding: 0px 0;
   margin-bottom: 10px;
   border-bottom: hsl(223, 64%, 98%) 3px solid;
+
   &,
   ul {
     display: flex;
