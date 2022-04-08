@@ -1,7 +1,4 @@
-import gridPicture1 from "../../images/image-product-1.jpg";
-import gridPicture2 from "../../images/image-product-2.jpg";
-import gridPicture3 from "../../images/image-product-3.jpg";
-import gridPicture4 from "../../images/image-product-4.jpg";
+import Content from "../Content";
 import styled from "styled-components";
 
 const Holder = styled.ul`
@@ -22,13 +19,13 @@ const Holder = styled.ul`
   }
 `;
 
-function GridPictures() {
+function GridPictures(props) {
   return (
     <Holder>
-      <img src={gridPicture1} alt="1st" tabindex="0"></img>
-      <img src={gridPicture2} alt="2nd" tabindex="0"></img>
-      <img src={gridPicture3} alt="3rd" tabindex="0"></img>
-      <img src={gridPicture4} alt="4th" tabindex="0"></img>
+      <img src={props.gridPicture1} alt="1st" tabindex="0"></img>
+      <img src={props.gridPicture2} alt="2nd" tabindex="0"></img>
+      <img src={props.gridPicture3} alt="3rd" tabindex="0"></img>
+      <img src={props.gridPicture4} alt="4th" tabindex="0"></img>
     </Holder>
   );
 }

@@ -1,12 +1,17 @@
 import Header from "./Header";
-
 import TextHolder from "./Body/TextHolder";
 import GridPictures from "./Body/GridPictures";
 import PriceHolder from "./Body/PriceHolder";
 import MainPictureHolder from "./Body/MainPictureHolder";
 import styled from "styled-components";
 import Cart from "./Cart";
-
+// pictures
+import mainPicture from "../images/image-product-1.jpg";
+import gridPicture1 from "../images/image-product-1.jpg";
+import gridPicture2 from "../images/image-product-2.jpg";
+import gridPicture3 from "../images/image-product-3.jpg";
+import gridPicture4 from "../images/image-product-4.jpg";
+// pictures
 // refactor
 const HolderColumn = styled.div`
   display: flex;
@@ -42,6 +47,11 @@ Featuring a durable rubber outer sole, they'll withstand everything the
 weather can offer`,
   price: 125.0,
   discount: 50,
+  mainPicture: mainPicture,
+  gridPicture1: gridPicture1,
+  gridPicture2: gridPicture2,
+  gridPicture3: gridPicture3,
+  gridPicture4: gridPicture4,
 };
 
 function Content() {
@@ -51,8 +61,15 @@ function Content() {
       <Header></Header>
       <Holder>
         <HolderColumn>
-          <MainPictureHolder></MainPictureHolder>
-          <GridPictures></GridPictures>
+          <MainPictureHolder
+            mainPicture={sneaker.gridPicture1}
+          ></MainPictureHolder>
+          <GridPictures
+            gridPicture1={sneaker.gridPicture1}
+            gridPicture2={sneaker.gridPicture2}
+            gridPicture3={sneaker.gridPicture3}
+            gridPicture4={sneaker.gridPicture4}
+          ></GridPictures>
         </HolderColumn>
         <HolderColumn>
           <TextHolder
