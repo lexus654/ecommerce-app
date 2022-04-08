@@ -57,7 +57,12 @@ weather can offer`,
 function Content() {
   return (
     <MainHolder>
-      <Cart title={sneaker.title} productName={sneaker.productName}></Cart>
+      <Cart
+        title={sneaker.title}
+        productName={sneaker.productName}
+        mainPicture={sneaker.gridPicture1}
+        price={sneaker.price}
+      ></Cart>
       <Header></Header>
       <Holder>
         <HolderColumn>
