@@ -7,11 +7,13 @@ const Holder = styled.div`
   justify-content: center;
   text-align: left;
   margin-bottom: 20px;
+  z-index: -100;
   & h1 {
     font-family: "Kumbh Sans", sans-serif;
     font-size: 2.3rem;
     line-height: 110%;
     margin-bottom: 20px;
+    z-index: -100;
   }
   & span {
     color: hsl(26, 100%, 55%);

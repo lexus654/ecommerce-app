@@ -3,8 +3,9 @@ import Content from "./Content";
 import deletePic from "../images/icon-delete.svg";
 
 const HolderAbove = styled.div`
-  width: 250px;
-  border: 1px solid black;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
   position: absolute;
   top: 100px;
   right: 100px;
@@ -12,7 +13,8 @@ const HolderAbove = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
-  padding: 10px 0;
+  padding: 10px 20px;
+  box-shadow: -1px 12px 24px 0px rgba(0, 0, 0, 0.75);
 
   & .title {
     font-size: 0.8rem;
@@ -33,8 +35,9 @@ const HolderAbove = styled.div`
     width: 40px;
     margin-right: 15px;
   }
-  & .product-holder {
+  & .product-holder-row {
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
@@ -61,6 +64,11 @@ const HolderAbove = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  & .total-price {
+    margin-left: 20px;
+    font-weight: bolder;
+  }
 `;
 
 function Cart(props) {
@@ -68,7 +76,7 @@ function Cart(props) {
   return (
     <HolderAbove>
       <p className="title">Cart</p>
-      <div className="product-holder">
+      <div className="product-holder-row">
         <img
           className="cart-picture"
           src={props.mainPicture}
@@ -77,7 +85,10 @@ function Cart(props) {
         <div className="product-holder-column">
           <p className="product-name">{props.productName}</p>
           <p className="cart-price">
-            {props.price} x {amount} {props.price * amount}
+            ${props.price.toFixed(2)} x {amount}
+            <span className="total-price">
+              ${(props.price * amount).toFixed(2)}
+            </span>
           </p>
         </div>
         <img className="delete" src={deletePic} alt="delerte"></img>
