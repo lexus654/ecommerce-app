@@ -4,6 +4,7 @@ import plus from "../../images/icon-plus.svg";
 import styled from "styled-components";
 import React, { useState } from "react";
 import Content from "../Content";
+import Cart from "../Cart";
 const Holder = styled.div`
   display: flex;
   flex-direction: ${(props) => props.direction};

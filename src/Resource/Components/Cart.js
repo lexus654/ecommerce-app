@@ -71,6 +71,8 @@ const HolderAbove = styled.div`
   }
 `;
 
+// refactor codes in cart
+// create better class names
 function Cart(props) {
   const amount = 2;
   return (
