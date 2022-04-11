@@ -53,6 +53,9 @@ weather can offer`,
   gridPicture3: gridPicture3,
   gridPicture4: gridPicture4,
 };
+const loggermain = function (num) {
+  console.log("hello in content", num);
+};
 
 function Content() {
   return (
@@ -83,6 +86,7 @@ function Content() {
             description={sneaker.description}
           ></TextHolder>
           <PriceHolder
+            loggermain={loggermain}
             price={sneaker.price}
             discount={sneaker.discount}
           ></PriceHolder>

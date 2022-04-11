@@ -93,6 +93,10 @@ function PriceHolder(props) {
   };
   const originalPrice = props.price / (props.discount / 100);
 
+  const logger = function () {
+    props.loggermain(newValue);
+  };
+
   return (
     <MainHolder>
       <Holder direction="column">
@@ -107,12 +111,14 @@ function PriceHolder(props) {
           <button onClick={minusValue} className="quantityButton">
             <img src={minus} alt="minus button"></img>
           </button>
+
           <p className="quantity">{newValue}</p>
+
           <button onClick={addValue} className="quantityButton">
             <img src={plus} alt="plus button"></img>
           </button>
         </Holder>
-        <button className="cartButton">
+        <button onClick={logger} className="cartButton">
           <img src={cartPrice} alt="add to cart"></img>
           Add to Cart
         </button>
