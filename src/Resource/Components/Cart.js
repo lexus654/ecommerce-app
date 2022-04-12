@@ -74,7 +74,8 @@ const HolderAbove = styled.div`
 // refactor codes in cart
 // create better class names
 function Cart(props) {
-  const amount = 2;
+  console.log(props.number, "hello");
+
   return (
     <HolderAbove>
       <p className="title">Cart</p>
@@ -87,9 +88,9 @@ function Cart(props) {
         <div className="product-holder-column">
           <p className="product-name">{props.productName}</p>
           <p className="cart-price">
-            ${props.price.toFixed(2)} x {amount}
+            ${props.price.toFixed(2)} x {props.number}
             <span className="total-price">
-              ${(props.price * amount).toFixed(2)}
+              ${(props.price * props.number).toFixed(2)}
             </span>
           </p>
         </div>

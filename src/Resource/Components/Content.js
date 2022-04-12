@@ -11,6 +11,8 @@ import gridPicture1 from "../images/image-product-1.jpg";
 import gridPicture2 from "../images/image-product-2.jpg";
 import gridPicture3 from "../images/image-product-3.jpg";
 import gridPicture4 from "../images/image-product-4.jpg";
+import React, { useState } from "react";
+
 // pictures
 // refactor
 const HolderColumn = styled.div`
@@ -53,11 +55,13 @@ weather can offer`,
   gridPicture3: gridPicture3,
   gridPicture4: gridPicture4,
 };
-const loggermain = function (num) {
-  console.log("hello in content", num);
-};
 
 function Content() {
+  const [number, setNumber] = useState(0);
+  const loggermain = function (num) {
+    console.log(num);
+    setNumber(num);
+  };
   return (
     <MainHolder>
       <Cart
@@ -65,6 +69,7 @@ function Content() {
         productName={sneaker.productName}
         mainPicture={sneaker.gridPicture1}
         price={sneaker.price}
+        number={number}
       ></Cart>
       <Header></Header>
       <Holder>
