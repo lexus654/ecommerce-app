@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Content from "./Content";
 import deletePic from "../images/icon-delete.svg";
-
+import Product from "./Product";
 const HolderAbove = styled.div`
   width: 300px;
   border-radius: 10px;
@@ -16,36 +16,6 @@ const HolderAbove = styled.div`
   padding: 10px 20px;
   box-shadow: -1px 12px 24px 0px rgba(0, 0, 0, 0.75);
 
-  & .title {
-    font-size: 0.8rem;
-    text-align: left;
-    margin: 10px;
-    font-weight: bolder;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
-  }
-  & .product-name,
-  .cart-price {
-    font-size: 0.7rem;
-    text-align: left;
-    margin-right: 15px;
-  }
-  & .cart-picture {
-    width: 40px;
-    margin-right: 15px;
-  }
-  & .product-holder-row {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  & .product-holder-column {
-    display: flex;
-    flex-direction: column;
-  }
   & .delete {
     width: 19px;
     height: 19px;
@@ -65,9 +35,12 @@ const HolderAbove = styled.div`
     align-items: center;
   }
 
-  & .total-price {
-    margin-left: 20px;
-    font-weight: bolder;
+  & .product-holder-row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
   }
 `;
 
@@ -80,20 +53,12 @@ function Cart(props) {
     <HolderAbove>
       <p className="title">Cart</p>
       <div className="product-holder-row">
-        <img
-          className="cart-picture"
-          src={props.mainPicture}
-          alt="pic cart"
-        ></img>
-        <div className="product-holder-column">
-          <p className="product-name">{props.productName}</p>
-          <p className="cart-price">
-            ${props.price.toFixed(2)} x {props.number}
-            <span className="total-price">
-              ${(props.price * props.number).toFixed(2)}
-            </span>
-          </p>
-        </div>
+        <Product
+          mainPicture={props.mainPicture}
+          productName={props.productName}
+          number={props.number}
+          price={props.price}
+        ></Product>
         <img className="delete" src={deletePic} alt="delerte"></img>
       </div>
       <button className="checkout">Check out</button>
