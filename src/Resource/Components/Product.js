@@ -5,9 +5,15 @@ import deletePic from "../images/icon-delete.svg";
 const HolderNew = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: space-between;
+  & .row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+  }
+
   & .product-name,
   .cart-price {
     font-size: 0.7rem;
@@ -29,23 +35,30 @@ const HolderNew = styled.div`
     margin-left: 20px;
     font-weight: bolder;
   }
+  & .delete {
+    width: 19px;
+    height: 19px;
+  }
 `;
 function Product(props) {
   return (
     <HolderNew>
-      <img
-        className="cart-picture"
-        src={props.mainPicture}
-        alt="pic cart"
-      ></img>
-      <div className="product-holder-column">
-        <p className="product-name">{props.productName}</p>
-        <p className="cart-price">
-          ${props.price.toFixed(2)} x {props.number}
-          <span className="total-price">
-            ${(props.price * props.number).toFixed(2)}
-          </span>
-        </p>
+      <div className="row">
+        <img
+          className="cart-picture"
+          src={props.mainPicture}
+          alt="pic cart"
+        ></img>
+        <div className="product-holder-column">
+          <p className="product-name">{props.productName}</p>
+          <p className="cart-price">
+            ${props.price.toFixed(2)} x {props.number}
+            <span className="total-price">
+              ${(props.price * props.number).toFixed(2)}
+            </span>
+          </p>
+        </div>
+        <img className="delete" src={deletePic} alt="delerte"></img>
       </div>
     </HolderNew>
   );

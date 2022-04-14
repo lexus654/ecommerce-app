@@ -16,11 +16,6 @@ const HolderAbove = styled.div`
   padding: 10px 20px;
   box-shadow: -1px 12px 24px 0px rgba(0, 0, 0, 0.75);
 
-  & .delete {
-    width: 19px;
-    height: 19px;
-  }
-
   & .checkout {
     background-color: hsl(26, 100%, 55%);
     border: none;
@@ -66,7 +61,6 @@ function Cart(props) {
           number={props.number}
           price={props.price}
         ></Product>
-        <img className="delete" src={deletePic} alt="delerte"></img>
       </div>
       <button className="checkout">Check out</button>
     </HolderAbove>
