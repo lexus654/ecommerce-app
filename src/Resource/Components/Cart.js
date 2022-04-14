@@ -42,6 +42,13 @@ const HolderAbove = styled.div`
     justify-content: center;
     margin-bottom: 20px;
   }
+  & .title {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: solid 1px hsl(220, 14%, 75%);
+  }
 `;
 
 // refactor codes in cart

@@ -5,7 +5,7 @@ import deletePic from "../images/icon-delete.svg";
 const HolderNew = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: space-between;
   & .product-name,
@@ -17,6 +17,7 @@ const HolderNew = styled.div`
   & .cart-picture {
     width: 40px;
     margin-right: 15px;
+    border-radius: 5px;
   }
 
   & .product-holder-column {
@@ -46,7 +47,6 @@ function Product(props) {
           </span>
         </p>
       </div>
-      ehllo
     </HolderNew>
   );
 }
