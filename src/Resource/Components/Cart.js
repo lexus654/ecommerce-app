@@ -52,7 +52,7 @@ function Cart(props) {
   console.log(props.number, "hello");
 
   return (
-    <HolderAbove>
+    <HolderAbove style={{ display: props.style }}>
       <p className="title">Cart</p>
       <div className="product-holder-row">
         <Product

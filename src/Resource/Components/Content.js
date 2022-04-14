@@ -58,20 +58,25 @@ weather can offer`,
 
 function Content() {
   const [number, setNumber] = useState(0);
+  const [style, setStyle] = useState("none");
   const loggermain = function (num) {
     console.log(num);
     setNumber(num);
   };
+  const passOpen = function (word) {
+    setStyle(word);
+  };
   return (
     <MainHolder>
       <Cart
+        style={style}
         title={sneaker.title}
         productName={sneaker.productName}
         mainPicture={sneaker.gridPicture1}
         price={sneaker.price}
         number={number}
       ></Cart>
-      <Header></Header>
+      <Header passOpen={passOpen}></Header>
       <Holder>
         <HolderColumn>
           <MainPictureHolder

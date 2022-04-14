@@ -54,7 +54,19 @@ const Holder = styled.div`
   }
 `;
 
-function Header() {
+function Header(props) {
+  const openCart = function () {
+    let style = "inline";
+
+    if (style === "inline") {
+      style = "none";
+      props.passOpen(style);
+    }
+    if (style === "none") {
+      style = "inline";
+      props.passOpen(style);
+    }
+  };
   return (
     <Holder>
       <img className="logo" src={logo} alt="logo"></img>
@@ -66,7 +78,7 @@ function Header() {
         <li>Contact</li>
       </ul>
       <ul className="list-end">
-        <img className="cart" src={cart} alt="cart"></img>
+        <img onClick={openCart} className="cart" src={cart} alt="cart"></img>
         <img className="userPhoto" src={userPhoto} alt="user"></img>
       </ul>
     </Holder>
