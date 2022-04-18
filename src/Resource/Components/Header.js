@@ -4,6 +4,7 @@ import userPhoto from "../images/image-avatar.png";
 // import "./Header.css";
 import styled from "styled-components";
 import Cart from "./Cart";
+import React, { useState } from "react";
 
 // fixing the styles
 const Holder = styled.div`
@@ -55,17 +56,29 @@ const Holder = styled.div`
 `;
 
 function Header(props) {
+  const [quan, setQuan] = useState(2);
   const openCart = function () {
-    let style = "inline";
-
-    if (style === "inline") {
-      style = "none";
-      props.passOpen(style);
-    }
-    if (style === "none") {
+    let style = "none";
+    // using odd even
+    if (quan % 2 === 0) {
       style = "inline";
       props.passOpen(style);
+      setQuan(quan + 1);
+    } else if (quan % 2 === 1) {
+      style = "none";
+      props.passOpen(style);
+      setQuan(quan + 1);
     }
+
+    // let style = "inline";
+    // if (style === "inline") {
+    //   style = "none";
+    //   props.passOpen(style);
+    // }
+    // if (style === "none") {
+    //   style = "inline";
+    //   props.passOpen(style);
+    // }
   };
   return (
     <Holder>

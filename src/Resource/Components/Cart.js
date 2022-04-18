@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Content from "./Content";
 import deletePic from "../images/icon-delete.svg";
 import Product from "./Product";
+
 const HolderAbove = styled.div`
   width: 300px;
   border-radius: 10px;
@@ -49,8 +50,6 @@ const HolderAbove = styled.div`
 // refactor codes in cart
 // create better class names
 function Cart(props) {
-  console.log(props.number, "hello");
-
   return (
     <HolderAbove style={{ display: props.style }}>
       <p className="title">Cart</p>

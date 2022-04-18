@@ -59,10 +59,13 @@ weather can offer`,
 function Content() {
   const [number, setNumber] = useState(0);
   const [style, setStyle] = useState("none");
+
   const loggermain = function (num) {
     console.log(num);
+    console.log(style);
     setNumber(num);
   };
+
   const passOpen = function (word) {
     setStyle(word);
   };
